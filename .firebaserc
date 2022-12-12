@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "eclairagenoctune": {
+      "hosting": {
+        "EclairageIntelligent": [
+          "eclairagenoctune"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "eclairagenoctune"
+  }
+}

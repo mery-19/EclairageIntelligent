@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "EclairageIntelligent:build:production",
+            "firebaseProject": "eclairagenoctune",
+            "firebaseHostingSite": "eclairagenoctune"
+          }
         }
       }
     }
