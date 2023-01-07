@@ -20,3 +20,51 @@ mwl-gauge {
     font-weight: bold;
     font-size: 1em;
   }
+  #main_div{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  #user_interface{
+    width: 50%;
+   
+
+  }
+  #the_title{
+    border-radius: 0.5rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px;
+    color: white;
+    margin: 0.5rem;
+    margin-left: 15%;
+    padding: 5px;
+    background-color:greenyellow;
+  }
+  #history{
+
+  }
+  #b_auto{
+    border: none;
+    background-color:rgb(14, 90, 66);
+
+  }
+  #b_manuelle{
+    border: none;
+    background-color:rgb(27, 15, 143);
+ }
+
+ #LED1{
+  border: none;
+  background-color:rgb(41, 249, 9);
+}
+#LED2{
+  border: none;
+  background-color:rgb(221, 239, 23);
+}
+#LED3{
+  border: none;
+  background-color:rgb(250, 40, 40);
+}
