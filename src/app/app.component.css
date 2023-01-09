@@ -1,50 +1,32 @@
-mwl-gauge {
-    width: 150px;
-    height: 150px;
-    display: block;
-    padding: 10px;
-  }
-  mwl-gauge > .gauge > .dial {
-    stroke: #eee;
-    stroke-width: 2;
-    fill: rgba(0, 0, 0, 0);
-  }
-  mwl-gauge > .gauge > .value {
-    stroke: rgb(47, 227, 255);
-    stroke-width: 2;
-    fill: rgba(0, 0, 0, 0);
-  }
-  mwl-gauge > .gauge > .value-text {
-    fill: rgb(47, 227, 255);
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-  }
+
   #main_div{
     height: 100vh;
     display: flex;
     flex-direction: row;
+    margin: 0;
   }
   #user_interface{
     width: 50%;
-   
-
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px;
+  }
+  #user_interface div{
+    margin: 10px;
   }
   #the_title{
     border-radius: 0.5rem;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     border: 1px;
     color: white;
-    margin: 0.5rem;
-    margin-left: 15%;
-    padding: 5px;
     background-color:greenyellow;
+    width: 50%;
+    margin: 0 auto !important;
+    padding: 4px;
   }
   #history{
-
+    background-color: white;
+    height: 100%;
+    width: 50%;
   }
   #b_auto{
     border: none;
@@ -67,4 +49,37 @@ mwl-gauge {
 #LED3{
   border: none;
   background-color:rgb(250, 40, 40);
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputcont {
+  margin: 1em;
+  display: flex;
+  align-items: flex-end;
+  height: 6em;
+}
+.outputcont {
+  margin: 1em;
+  display: flex;
+  align-items: flex-end;
+  height: 6em;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+#color {
+  height: 6em;
+  width: 10em;
+}
+
+.m-10{
+  margin: 10px;
 }

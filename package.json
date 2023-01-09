@@ -16,6 +16,7 @@
     "@angular/core": "^14.0.0",
     "@angular/fire": "^7.5.0",
     "@angular/forms": "^14.0.0",
+    "@angular/material": "^7.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
@@ -25,6 +26,7 @@
     "ngx-gauge": "^6.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "tsparticles": "^2.7.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

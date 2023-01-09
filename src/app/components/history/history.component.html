@@ -1,0 +1,23 @@
+<div class="right-div">
+        <table>
+          <thead>
+              <tr>
+                  <th>Numéro Led</th>
+                  <th>Date d'allumage</th>
+                  <th>Date d'éteite</th>
+                  <th>Durée</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let h of history">
+                  <td>{{ h.led }} </td>
+                  <td>{{ h.date_allumage }} </td>
+                  <td>{{ h.date_eteinte }} </td>
+              </tr>
+          </tbody>
+        </table>
+        <br/>
+        Valeur actuelle :
+        <li>Degré de luminosité : {{current?.degree_luminisite}}</li>
+        <li>Couleur : {{current?.nuance}}</li>
+</div>

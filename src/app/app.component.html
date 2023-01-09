@@ -1,14 +1,17 @@
 <div id="main_div">
     <div id="user_interface">
-        <h1 id="the_title">Eclérage Intelligent</h1>
+        <div id="the_title">
+             <h2 >Eclairage Intelligent</h2>
+        </div>
+        <div id="inputs">
         <div>
-            <button id="b_auto">Automatique</button>
-            <button id="b_manuelle">Manuelle</button>
+            <button mat-raised-button color="primary" class="m-10">Automatique</button>
+            <button mat-raised-button color="accent" class="m-10"style="color: white;" id="b_manuelle">Manuelle</button>
         </div>
         <div>
-            <button id="LED1">LED 1</button>
-            <button id="LED2">LED 2</button>
-            <button id="LED3">LED 3</button>
+            <button mat-raised-button color="warn" class="m-10">LED1</button>
+            <button mat-raised-button color="warn" class="m-10" >LED2</button>
+            <button mat-raised-button color="warn" class="m-10" >LED3</button>
         </div>
 
         <div>
@@ -19,38 +22,27 @@
             <button id="nivau5"> 5 </button>
             <button id="nivau6"> 6 </button>
         </div>
+        <div class="container">
 
-    </div>
-    
-
-    
-    <div id="history">
-        <div>
-            <table>
-              <thead>
-                  <tr>
-                      <th>Numéro Led</th>
-                      <th>Date d'allumage</th>
-                      <th>Date d'éteite</th>
-                      <th>Durée</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr *ngFor="let h of history">
-                      <td>{{ h.led }} </td>
-                      <td>{{ h.date_allumage }} </td>
-                      <td>{{ h.date_eteinte }} </td>
-                  </tr>
-              </tbody>
-            </table>
+            <div class="inputcont">
+              <label for="color">Enter color:</label>
+              <input type="color" name="color" id="color">
             </div>
-            <br/>
-            Valeur actuelle :
-            <li>Degré de luminosité : {{current?.degree_luminisite}}</li>
-            <li>Couleur : {{current?.nuance}}</li>
+          
+            <div class="outputcont">
+              <label for="output" id="lightnesslabel">Lightness: </label>
+              <span id='output'>0.000</span>
+            </div>
+          
+          </div>
     </div>
+
+    </div>
+
+    <div id="history">
+            <app-history></app-history>
+    </div>
+
+
 </div>
 
-<!-- <ngx-gauge *ngIf=
-"current" [value]=
-"current.temperature ?? 0"> </ngx-gauge> -->
