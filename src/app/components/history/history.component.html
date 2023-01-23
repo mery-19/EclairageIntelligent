@@ -1,4 +1,4 @@
-<div class="right-div">
+<!--<div class="right-div">
         <table>
           <thead>
               <tr>
@@ -20,4 +20,86 @@
         Valeur actuelle :
         <li>Degré de luminosité : {{current?.degree_luminisite}}</li>
         <li>Couleur : {{current?.nuance}}</li>
+</div>
+<div class="right-div">
+    <div class="card">
+        <div class="card-header" style="display: flex;
+        justify-content: center;
+        align-items: center;">
+          <h3 class="card-title" ><b>Historique </b></h3>
+        </div>
+       
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Numéro Led</th>
+                    <th>Date d'allumage</th>
+                    <th>Date d'éteite</th>
+                    <th>Durée</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let h of history">
+                    <td>{{ h.led }} </td>
+                    <td>{{ h.date_allumage }} </td>
+                    <td>{{ h.date_eteinte }} </td>
+                    <td></td>
+                </tr>
+            </tbody>
+          
+          </table>
+        </div>
+       
+    </div>
+</div>
+
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      
+    });
+  </script>-->
+
+  <div class="right-div"  *ngIf="displayTable" >
+  <!--<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead>
+        <tr>
+            <th>Numéro Led</th>
+            <th>Date d'allumage</th>
+            <th>Date d'éteinte</th>
+            <th>Durée</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let h of history">
+            <td>{{ h.led }} </td>
+            <td>{{ h.date_allumage }} </td>
+            <td>{{ h.date_eteinte }} </td>
+            <td>{{ calculateDiff(h.date_eteinte, h.date_allumage) }}</td>
+        </tr>
+	</tbody>
+</table>-->
+<table datatable class="row-border hover">
+  <thead>
+    <tr>
+      <th>Numéro Led</th>
+      <th>Date d'allumage</th>
+      <th>Date d'éteinte</th>
+      <th>Durée</th>
+  </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let h of history">
+      <td>{{ h.led }} </td>
+      <td>{{ h.date_allumage }} </td>
+      <td>{{ h.date_eteinte }} </td>
+      <td>{{ calculateDiff(h.date_eteinte, h.date_allumage) }}</td>
+    </tr>
+  
+  </tbody>
+</table>
 </div>

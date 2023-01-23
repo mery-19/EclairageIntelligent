@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { NgxGaugeModule } from 'ngx-gauge';
 import {MatButtonModule} from '@angular/material/button';
 import { HistoryComponent } from './components/history/history.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HistoryComponent } from './components/history/history.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DataTablesModule,
     NgxGaugeModule,  
     MatButtonModule
   ],

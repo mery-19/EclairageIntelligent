@@ -14,27 +14,20 @@
             <button mat-raised-button color="warn" class="m-10" >LED3</button>
         </div>
 
-        <div>
-            <button id="nivau1"> 1 </button>
-            <button id="nivau2"> 2 </button>
-            <button id="nivau3"> 3 </button>
-            <button id="nivau4"> 4 </button>
-            <button id="nivau5"> 5 </button>
-            <button id="nivau6"> 6 </button>
-        </div>
         <div class="container">
 
             <div class="inputcont">
-              <label for="color">Enter color:</label>
-              <input type="color" name="color" id="color">
+              <label for="color" style="color:white;">Enter color:</label>
+              <input type="color" name="color" id="color" style="color:red;" (change)="onInputChange($event)">
             </div>
           
             <div class="outputcont">
-              <label for="output" id="lightnesslabel">Lightness: </label>
-              <span id='output'>0.000</span>
+              <label for="output" id="lightnesslabel" style="color: white;">Lightness: </label>
+              <span id='output'style="color: white;">0.000</span>
             </div>
           
           </div>
+          <button id="test">Boutton 1</button>
     </div>
 
     </div>
