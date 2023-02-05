@@ -43,9 +43,39 @@ export class HistoryComponent implements OnInit {
  
   
  calculateDiff(date1:any, date2:any){
-    date1= new Date(date1);
-    date2= new Date(date2);
-    return Math.floor((Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate()) - Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()) ) /(1000 * 60 * 60 * 24));
+    date1 = new Date(date1);
+    date2 = new Date(date2);
+    let timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    let diffSeconds = Math.floor(timeDiff / 1000);
+    let diffMinutes = Math.floor(diffSeconds / 60);
+    let diffHours = Math.floor(diffMinutes / 60);
+    return diffHours + "h " + (diffMinutes % 60) + "min " + (diffSeconds % 60) + "s"
+}
+
+calculateConsomation(date1:any, date2:any){
+  date1 = new Date(date1);
+  date2 = new Date(date2);
+  const consom = 0.3;
+  let timeDiff = Math.abs(date2.getTime() - date1.getTime());
+  return consom*timeDiff;
+ 
+}
+
+formatText = (text:number = 0)=>{
+  let characters = text.toString().split('');
+
+  let str = "";
+  if(characters.length > 1){
+    characters.forEach((l:string) => {
+      str = l + ','+str;
+    })
+
+    str = str.slice(0,-1);
+  }else {
+    str = text.toString()
+  }
+
+  return str;
 }
 
 }

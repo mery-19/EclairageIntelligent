@@ -89,17 +89,18 @@
       <th>Date d'allumage</th>
       <th>Date d'éteinte</th>
       <th>Durée</th>
-  </tr>
+      <th>Consommation (W/s)</th>
+    </tr>
   </thead>
   <tbody>
-    
-    <tr *ngFor="let h of history">
-      <td>{{ h.led }} </td>
-      <td>{{ h.date_allumage }} </td>
-      <td>{{ h.date_eteinte }} </td>
-      <td>{{ calculateDiff(h.date_eteinte, h.date_allumage) }}</td>
-    </tr>
-  
+      <tr *ngFor="let h of history" >
+        <td>{{ formatText(h.led) }} </td>
+        <td>{{ h.date_allumage }} </td>
+        <td >{{ h.date_eteinte }}</td>
+        <!-- <td>{{ calculateDiff(h.date_eteinte, h.date_allumage) }}</td> -->
+        <td>{{ h.date_eteinte!=""? calculateDiff(h.date_eteinte, h.date_allumage):"En attente" }}</td>
+        <td>{{ h.date_eteinte!=""? calculateConsomation(h.date_eteinte, h.date_allumage):"En attente" }}</td>
+      </tr>  
   </tbody>
 </table>
 </div>
