@@ -5,30 +5,37 @@
         </div>
         <div id="inputs">
         <div>
-            <button mat-raised-button color="primary" class="m-10">Automatique</button>
-            <button mat-raised-button color="accent" class="m-10"style="color: white;" id="b_manuelle">Manuelle</button>
+            <button mat-raised-button class="m-10 mode-btn"style="color: white;" id="b_auto" (click)="onAutoClick()"[ngClass]="{'mode-btn-selected': !isManuelle, 'mode-btn-unselected': isManuelle }">Automatique</button>
+            <button mat-raised-button class="m-10 mode-btn"style="color: white;" id="b_manuelle" (click)="onManuelleClick()"[ngClass]="{'mode-btn-selected': isManuelle, 'mode-btn-unselected': !isManuelle }">Manuelle</button>
         </div>
+
+        <!-- HIDE -->
+        <div><label style="color:white;">Sélectionner les LEDs à allumer</label>
+
         <div>
-            <button mat-raised-button color="warn" class="m-10">LED1</button>
-            <button mat-raised-button color="warn" class="m-10" >LED2</button>
-            <button mat-raised-button color="warn" class="m-10" >LED3</button>
+
+            <button mat-raised-button  class="m-10 led" *ngFor="let button of buttons" [ngClass]="{'led-selected': button.selected, 'led-unselected': !button.selected }" (click)="selectButton(button)">{{button.label}}</button>
+        </div>
+      </div>
+        
+        <div *ngIf="isManuelle">
+          <div>
+            <label for="color" style="color:white;">Sélectionner la couleur: </label>
+
+            <div class="container">
+                <div class="inputcont">
+                  <input type="color" name="color" id="color" style="color:red;" (change)="onInputChange($event)">
+                </div>
+              
+              </div>
+          </div>
+    
         </div>
 
-        <div class="container">
+        <button mat-raised-button color="accent" class="m-10"style="color: white;" id="b_auto" (click)="onSendClick()">Envoyer</button>
+  </div>
+            <!-- HIDE -->
 
-            <div class="inputcont">
-              <label for="color" style="color:white;">Enter color:</label>
-              <input type="color" name="color" id="color" style="color:red;" (change)="onInputChange($event)">
-            </div>
-          
-            <div class="outputcont">
-              <label for="output" id="lightnesslabel" style="color: white;">Lightness: </label>
-              <span id='output'style="color: white;">0.000</span>
-            </div>
-          
-          </div>
-          <button id="test">Boutton 1</button>
-    </div>
 
     </div>
 

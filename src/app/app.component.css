@@ -18,7 +18,7 @@
     border-radius: 0.5rem;
     border: 1px;
     color: white;
-    background-color:greenyellow;
+    background-color:#4C516D;
     width: 50%;
     margin: 0 auto !important;
     padding: 4px;
@@ -40,7 +40,7 @@
 
  #LED1{
   border: none;
-  background-color:rgb(41, 249, 9);
+  background-color:#4C516D;
 }
 #LED2{
   border: none;
@@ -82,4 +82,29 @@ label {
 
 .m-10{
   margin: 10px;
+}
+
+/* LEDS */
+.led-selected{
+  background-color: brown !important;
+  color: white !important;
+}
+
+.led-unselected{
+  background-color: gray !important;
+  color: black !important;
+}
+
+.text-white{
+  color: white;
+}
+
+.mode-btn-selected {
+  background-color: #518a8d !important;
+  color: white !important;
+}
+
+.mode-btn-unselected {
+  background-color: gray !important;
+  color: black !important;
 }

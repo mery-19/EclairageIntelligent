@@ -1,8 +1,10 @@
-export interface Eclairage {
-    mode?:boolean;
-    led?:number[];
-    nuance?:number[];
+export  interface Eclairage {
+    mode?:number;
+    led?:number;
+    r?:number;
+    g?:number;
+    b?:number;
     degree_luminisite?:number;
-    date_allumage?: Date;
-    date_eteinte?: Date;
+    date_allumage?:  string;
+    date_eteinte?: string;
 }
