@@ -135,7 +135,7 @@ export class AppComponent  {
       // Send new Data
       const itemRef = this.db.list('eclairage');
       itemRef.push(this.data);
-      const itemRef1 = this.db.object('globalTest');
+      const itemRef1 = this.db.object('global');
       itemRef1.set(this.data);
       
      // Update prev data
